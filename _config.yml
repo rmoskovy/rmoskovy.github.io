@@ -12,7 +12,7 @@ timezone: Europe/London
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Ryan Moan
+title: Ryan Moran
 
 tagline: "Independent Security Researcher & Bug Hunter"
 
@@ -28,7 +28,7 @@ twitter:
   username: rmoskovy
 
 social:
-  name: Ryan Moan
+  name: Ryan Moran
   email: ryanmoskvoy@pm.me
   links:
     - https://twitter.com/rmoskovy
