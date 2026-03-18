@@ -37,10 +37,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install npm dependencies
         run: npm install
+
+      - name: Build JS assets
+        run: npx rollup -c --bundleConfigAsCjs --environment BUILD:production
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -52,6 +55,7 @@ jobs:
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
+          SASS_PATH: "node_modules"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
