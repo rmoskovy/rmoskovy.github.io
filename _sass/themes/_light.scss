@@ -1,109 +1,106 @@
 @mixin styles {
-  /* Framework color */
   --main-bg: #ffffff;
   --mask-bg: #d0d0d0;
-  --main-border-color: #e8e8e8;
+  --main-border-color: #ebebeb;
 
-  /* Common color */
-  --text-color: #1a1a1a;
-  --text-muted-color: #6b6b6b;
-  --text-muted-highlight-color: #333333;
+  --text-color: #222222;
+  --text-muted-color: #717171;
+  --text-muted-highlight-color: #2d2d2d;
   --heading-color: #000000;
-  --label-color: #444444;
-  --blockquote-border-color: #d0d0d0;
-  --blockquote-text-color: #555555;
+  --label-color: #4a4a4a;
+  --blockquote-border-color: #000000;
+  --blockquote-text-color: #4a4a4a;
   --link-color: #000000;
-  --link-underline-color: #c0c0c0;
+  --link-underline-color: #c8c8c8;
   --button-bg: #ffffff;
-  --btn-border-color: #d5d5d5;
+  --btn-border-color: #dcdcdc;
   --btn-backtotop-color: #555555;
   --btn-backtotop-border-color: #e0e0e0;
   --checkbox-color: #b0b0b0;
   --checkbox-checked-color: #000000;
-  --img-bg: radial-gradient(circle, #ffffff 0%, #f0f0f0 100%);
+  --img-bg: radial-gradient(circle, #ffffff 0%, #f5f5f5 100%);
   --shimmer-bg: linear-gradient(
     90deg,
     rgb(250 250 250 / 0%) 0%,
-    rgb(220 220 220 / 100%) 50%,
+    rgb(230 230 230 / 100%) 50%,
     rgb(250 250 250 / 0%) 100%
   );
 
   /* Sidebar */
   --site-title-color: #000000;
-  --site-subtitle-color: #555555;
-  --sidebar-bg: #fafafa;
-  --sidebar-border-color: #e8e8e8;
+  --site-subtitle-color: #666666;
+  --sidebar-bg: #f7f7f7;
+  --sidebar-border-color: #eaeaea;
   --sidebar-muted-color: #555555;
   --sidebar-active-color: #000000;
-  --sidebar-hover-bg: #f0f0f0;
+  --sidebar-hover-bg: #eeeeee;
   --sidebar-btn-bg: #ffffff;
-  --sidebar-btn-color: #777777;
-  --avatar-border-color: #d0d0d0;
+  --sidebar-btn-color: #888888;
+  --avatar-border-color: #d5d5d5;
 
   /* Topbar */
-  --topbar-bg: rgb(255 255 255 / 85%);
-  --topbar-text-color: #333333;
+  --topbar-bg: rgb(255 255 255 / 90%);
+  --topbar-text-color: #2a2a2a;
   --search-border-color: #d8d8d8;
   --search-icon-color: #aaaaaa;
-  --input-focus-border-color: #888888;
+  --input-focus-border-color: #777777;
 
   /* Home page */
-  --post-list-text-color: #555555;
+  --post-list-text-color: #4a4a4a;
   --btn-patinator-text-color: #444444;
-  --btn-paginator-hover-color: #f0f0f0;
+  --btn-paginator-hover-color: #f2f2f2;
 
   /* Posts */
   --toc-highlight: #000000;
   --toc-popup-border-color: #cccccc;
-  --btn-share-color: #888888;
+  --btn-share-color: #999999;
   --btn-share-hover-color: #000000;
   --card-bg: #ffffff;
-  --card-hover-bg: #e8e8e8;
-  --card-shadow: rgb(0 0 0 / 4%) 0 2px 6px 0,
-    rgb(0 0 0 / 8%) 0 0 0 1px;
-  --footnote-target-bg: #f0f0f0;
+  --card-hover-bg: #f0f0f0;
+  --card-shadow: 0 1px 3px rgb(0 0 0 / 6%), 0 0 0 1px rgb(0 0 0 / 4%);
+  --footnote-target-bg: #f5f5f5;
   --tb-odd-bg: #fafafa;
-  --tb-border-color: #e0e0e0;
+  --tb-border-color: #e5e5e5;
   --dash-color: #c0c0c0;
-  --kbd-wrap-color: #b0b0b0;
+  --kbd-wrap-color: #b5b5b5;
   --kbd-text-color: #1a1a1a;
-  --kbd-bg-color: #f5f5f5;
-  --prompt-text-color: rgb(30 30 30 / 80%);
-  --prompt-tip-bg: #f0f0f0;
+  --kbd-bg-color: #f8f8f8;
+  --prompt-text-color: rgb(30 30 30 / 85%);
+  --prompt-tip-bg: #f6f6f6;
   --prompt-tip-icon-color: #555555;
-  --prompt-info-bg: #f0f0f0;
+  --prompt-info-bg: #f6f6f6;
   --prompt-info-icon-color: #555555;
-  --prompt-warning-bg: #f0f0f0;
+  --prompt-warning-bg: #f6f6f6;
   --prompt-warning-icon-color: #555555;
-  --prompt-danger-bg: #e8e8e8;
+  --prompt-danger-bg: #f0f0f0;
   --prompt-danger-icon-color: #333333;
 
   /* Tags */
-  --tag-border: #d5d5d5;
+  --tag-border: #dcdcdc;
   --tag-shadow: var(--btn-border-color);
-  --tag-hover: #e8e8e8;
-  --search-tag-bg: #f5f5f5;
+  --tag-hover: #ebebeb;
+  --search-tag-bg: #f8f8f8;
 
   /* Categories */
-  --categories-border: rgb(0 0 0 / 10%);
-  --categories-hover-bg: #e8e8e8;
+  --categories-border: rgb(0 0 0 / 8%);
+  --categories-hover-bg: #ebebeb;
   --categories-icon-hover-color: #000000;
 
   /* Archive */
-  --timeline-color: rgb(0 0 0 / 10%);
+  --timeline-color: rgb(0 0 0 / 8%);
   --timeline-node-bg: #aaaaaa;
   --timeline-year-dot-color: #ffffff;
 
   /* Code */
-  --language-border-color: #e0e0e0;
-  --highlight-bg-color: #f5f5f5;
-  --highlighter-rouge-color: #333333;
-  --highlight-lineno-color: #999999;
-  --inline-code-bg: rgb(0 0 0 / 5%);
-  --code-color: #333333;
-  --code-header-text-color: #999999;
-  --code-header-muted-color: #e0e0e0;
-  --code-header-icon-color: #bbbbbb;
+  --language-border-color: #e5e5e5;
+  --highlight-bg-color: #f8f8f8;
+  --highlighter-rouge-color: #2a2a2a;
+  --highlight-lineno-color: #aaaaaa;
+  --inline-code-bg: rgb(0 0 0 / 4%);
+  --code-color: #2a2a2a;
+  --code-header-text-color: #aaaaaa;
+  --code-header-muted-color: #e5e5e5;
+  --code-header-icon-color: #cccccc;
   --clipboard-checked-color: #555555;
 
   [class^='prompt-'] {
@@ -126,8 +123,8 @@
 
   .highlight,
   .highlight .w {
-    color: #1a1a1a;
-    background-color: #f5f5f5;
+    color: #222222;
+    background-color: #f8f8f8;
   }
 
   .highlight .k,
@@ -138,16 +135,16 @@
   .highlight .kt,
   .highlight .kv {
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .gr {
-    color: #1a1a1a;
+    color: #222222;
   }
 
   .highlight .gd {
     color: #555555;
-    background-color: #e8e8e8;
+    background-color: #ebebeb;
   }
 
   .highlight .nb {
@@ -156,7 +153,7 @@
 
   .highlight .nc {
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .no {
@@ -186,7 +183,7 @@
 
   .highlight .kc {
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .l,
@@ -212,7 +209,7 @@
 
   .highlight .ne {
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .nl {
@@ -238,12 +235,12 @@
 
   .highlight .gh {
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .gu {
     color: #555555;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .s,
@@ -282,20 +279,20 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #999999;
+    color: #aaaaaa;
     font-style: italic;
   }
 
   .highlight .gl {
-    color: #999999;
+    color: #aaaaaa;
   }
 
   .highlight .gt {
-    color: #999999;
+    color: #aaaaaa;
   }
 
   .highlight .ni {
-    color: #1a1a1a;
+    color: #222222;
   }
 
   .highlight .si {
@@ -303,12 +300,12 @@
   }
 
   .highlight .ge {
-    color: #1a1a1a;
+    color: #222222;
     font-style: italic;
   }
 
   .highlight .gs {
-    color: #1a1a1a;
-    font-weight: bold;
+    color: #222222;
+    font-weight: 600;
   }
 }

@@ -53,9 +53,10 @@ img {
 }
 
 blockquote {
-  border-left: 0.125rem solid var(--blockquote-border-color);
-  padding-left: 1rem;
+  border-left: 2px solid var(--blockquote-border-color);
+  padding-left: 1.25rem;
   color: var(--blockquote-text-color);
+  font-style: italic;
   margin-top: 0.5rem;
 
   > p:last-child {
@@ -146,7 +147,7 @@ sup {
 }
 
 main {
-  line-height: 1.75;
+  line-height: 1.8;
 
   h1 {
     margin-top: 2rem;

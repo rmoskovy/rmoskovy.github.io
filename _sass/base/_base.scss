@@ -95,6 +95,7 @@ main {
   border: 0;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &::before {
     @extend %rounded;
@@ -105,12 +106,15 @@ main {
     position: absolute;
     background-color: var(--card-hover-bg);
     opacity: 0;
-    transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.3s ease;
   }
 
   &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 8%), 0 0 0 1px rgb(0 0 0 / 4%);
+
     &::before {
-      opacity: 0.3;
+      opacity: 0.15;
     }
   }
 }
@@ -130,12 +134,12 @@ main {
 }
 
 .content {
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   margin-top: 2rem;
   overflow-wrap: break-word;
 
   @include bp.xl {
-    font-size: 1.03rem;
+    font-size: 1.02rem;
   }
 
   a {

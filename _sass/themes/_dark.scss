@@ -1,113 +1,110 @@
 @mixin styles {
   color-scheme: dark;
 
-  /* Framework color */
-  --main-bg: #0a0a0a;
-  --mask-bg: #333333;
-  --main-border-color: #222222;
+  --main-bg: #000000;
+  --mask-bg: #2a2a2a;
+  --main-border-color: #1a1a1a;
 
-  /* Common color */
-  --text-color: #d4d4d4;
-  --text-muted-color: #888888;
-  --text-muted-highlight-color: #bbbbbb;
+  --text-color: #d0d0d0;
+  --text-muted-color: #808080;
+  --text-muted-highlight-color: #c0c0c0;
   --heading-color: #ffffff;
   --label-color: #aaaaaa;
-  --blockquote-border-color: #333333;
-  --blockquote-text-color: #888888;
+  --blockquote-border-color: #ffffff;
+  --blockquote-text-color: #909090;
   --link-color: #ffffff;
-  --link-underline-color: #555555;
-  --button-bg: #151515;
-  --btn-border-color: #2a2a2a;
+  --link-underline-color: #444444;
+  --button-bg: #0d0d0d;
+  --btn-border-color: #222222;
   --btn-backtotop-color: var(--text-color);
-  --btn-backtotop-border-color: #1a1a1a;
-  --card-header-bg: #181818;
-  --checkbox-color: #555555;
+  --btn-backtotop-border-color: #151515;
+  --card-header-bg: #111111;
+  --checkbox-color: #484848;
   --checkbox-checked-color: #ffffff;
-  --img-bg: radial-gradient(circle, #0a0a0a 0%, #181818 100%);
+  --img-bg: radial-gradient(circle, #000000 0%, #111111 100%);
   --shimmer-bg: linear-gradient(
     90deg,
     rgb(255 255 255 / 0%) 0%,
-    rgb(255 255 255 / 5%) 50%,
+    rgb(255 255 255 / 4%) 50%,
     rgb(255 255 255 / 0%) 100%
   );
 
   /* Sidebar */
   --site-title-color: #ffffff;
-  --site-subtitle-color: #888888;
-  --sidebar-bg: #0a0a0a;
-  --sidebar-border-color: #1a1a1a;
-  --sidebar-muted-color: #888888;
+  --site-subtitle-color: #808080;
+  --sidebar-bg: #000000;
+  --sidebar-border-color: #141414;
+  --sidebar-muted-color: #808080;
   --sidebar-active-color: #ffffff;
-  --sidebar-hover-bg: #1a1a1a;
-  --sidebar-btn-bg: #151515;
-  --sidebar-btn-color: #666666;
-  --avatar-border-color: rgb(255 255 255 / 20%);
+  --sidebar-hover-bg: #111111;
+  --sidebar-btn-bg: #0d0d0d;
+  --sidebar-btn-color: #555555;
+  --avatar-border-color: rgb(255 255 255 / 15%);
 
   /* Topbar */
-  --topbar-bg: rgb(10 10 10 / 85%);
+  --topbar-bg: rgb(0 0 0 / 90%);
   --topbar-text-color: var(--text-color);
-  --search-border-color: #2a2a2a;
-  --search-icon-color: #555555;
-  --input-focus-border-color: #666666;
+  --search-border-color: #222222;
+  --search-icon-color: #444444;
+  --input-focus-border-color: #555555;
 
   /* Home page */
   --post-list-text-color: #aaaaaa;
   --btn-patinator-text-color: var(--text-color);
-  --btn-paginator-hover-color: #1a1a1a;
+  --btn-paginator-hover-color: #111111;
 
   /* Posts */
   --toc-highlight: #ffffff;
-  --toc-popup-border-color: #2a2a2a;
-  --tag-hover: #222222;
-  --tb-odd-bg: #111111;
-  --tb-even-bg: #0e0e0e;
+  --toc-popup-border-color: #222222;
+  --tag-hover: #1a1a1a;
+  --tb-odd-bg: #0a0a0a;
+  --tb-even-bg: #060606;
   --tb-border-color: var(--tb-odd-bg);
-  --footnote-target-bg: #222222;
-  --btn-share-color: #666666;
+  --footnote-target-bg: #1a1a1a;
+  --btn-share-color: #555555;
   --btn-share-hover-color: #ffffff;
-  --card-bg: #111111;
-  --card-hover-bg: #2a2a2a;
-  --card-shadow: rgb(0 0 0 / 50%) 0 6px 18px 0,
-    rgb(255 255 255 / 5%) 0 0 0 1px;
-  --kbd-wrap-color: #555555;
+  --card-bg: #0a0a0a;
+  --card-hover-bg: #1a1a1a;
+  --card-shadow: 0 1px 4px rgb(0 0 0 / 60%), 0 0 0 1px rgb(255 255 255 / 3%);
+  --kbd-wrap-color: #444444;
   --kbd-text-color: #d0d0d0;
-  --kbd-bg-color: #1a1a1a;
-  --prompt-text-color: rgb(220 220 220 / 75%);
-  --prompt-tip-bg: #1a1a1a;
-  --prompt-tip-icon-color: #888888;
-  --prompt-info-bg: #1a1a1a;
-  --prompt-info-icon-color: #888888;
-  --prompt-warning-bg: #1a1a1a;
+  --kbd-bg-color: #141414;
+  --prompt-text-color: rgb(220 220 220 / 80%);
+  --prompt-tip-bg: #0d0d0d;
+  --prompt-tip-icon-color: #808080;
+  --prompt-info-bg: #0d0d0d;
+  --prompt-info-icon-color: #808080;
+  --prompt-warning-bg: #0d0d0d;
   --prompt-warning-icon-color: #aaaaaa;
-  --prompt-danger-bg: #1a1a1a;
+  --prompt-danger-bg: #0d0d0d;
   --prompt-danger-icon-color: #cccccc;
 
   /* Tags */
-  --tag-border: #333333;
-  --tag-shadow: #111111;
-  --dash-color: #333333;
-  --search-tag-bg: #151515;
+  --tag-border: #2a2a2a;
+  --tag-shadow: #0a0a0a;
+  --dash-color: #2a2a2a;
+  --search-tag-bg: #0d0d0d;
 
   /* Categories */
-  --categories-border: rgb(255 255 255 / 8%);
-  --categories-hover-bg: #2a2a2a;
+  --categories-border: rgb(255 255 255 / 6%);
+  --categories-hover-bg: #1a1a1a;
   --categories-icon-hover-color: #ffffff;
 
   /* Archive */
-  --timeline-node-bg: #666666;
-  --timeline-color: #333333;
+  --timeline-node-bg: #555555;
+  --timeline-color: #2a2a2a;
   --timeline-year-dot-color: var(--timeline-color);
 
   /* Code */
-  --language-border-color: #1a1a1a;
-  --highlight-bg-color: #0e0e0e;
+  --language-border-color: #141414;
+  --highlight-bg-color: #0a0a0a;
   --highlighter-rouge-color: #d0d0d0;
-  --highlight-lineno-color: #555555;
-  --inline-code-bg: rgb(255 255 255 / 6%);
-  --code-color: #c0c0c0;
-  --code-header-text-color: #555555;
-  --code-header-muted-color: #222222;
-  --code-header-icon-color: #444444;
+  --highlight-lineno-color: #444444;
+  --inline-code-bg: rgb(255 255 255 / 5%);
+  --code-color: #bbbbbb;
+  --code-header-text-color: #444444;
+  --code-header-muted-color: #1a1a1a;
+  --code-header-icon-color: #333333;
   --clipboard-checked-color: #aaaaaa;
   --filepath-text-color: #cccccc;
 
@@ -115,7 +112,6 @@
     display: none;
   }
 
-  /* Categories */
   .categories.card,
   .list-group-item {
     background-color: var(--card-bg);
@@ -141,11 +137,11 @@
   #archives li:nth-child(odd) {
     background-image: linear-gradient(
       to left,
+      #000000,
       #0a0a0a,
-      #141414,
-      #141414,
-      #141414,
-      #0a0a0a
+      #0a0a0a,
+      #0a0a0a,
+      #000000
     );
   }
 
@@ -157,7 +153,7 @@
   /* Monochrome syntax highlighting (dark) */
 
   .highlight .gp {
-    color: #777777;
+    color: #666666;
   }
 
   .highlight table td {
@@ -171,12 +167,12 @@
   .highlight,
   .highlight .w {
     color: #d0d0d0;
-    background-color: #0e0e0e;
+    background-color: #0a0a0a;
   }
 
   .highlight .err {
-    color: #0e0e0e;
-    background-color: #aaaaaa;
+    color: #0a0a0a;
+    background-color: #999999;
   }
 
   .highlight .c,
@@ -186,12 +182,12 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #666666;
+    color: #555555;
     font-style: italic;
   }
 
   .highlight .cp {
-    color: #aaaaaa;
+    color: #999999;
   }
 
   .highlight .nt {
@@ -213,14 +209,14 @@
   }
 
   .highlight .gd {
-    color: #888888;
-    background-color: #1a1a1a;
+    color: #777777;
+    background-color: #111111;
   }
 
   .highlight .gh {
     color: #ffffff;
-    background-color: #0e0e0e;
-    font-weight: bold;
+    background-color: #0a0a0a;
+    font-weight: 600;
   }
 
   .highlight .k,
@@ -229,12 +225,12 @@
   .highlight .kr,
   .highlight .kv {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .kc {
     color: #cccccc;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .kt {
@@ -243,7 +239,7 @@
 
   .highlight .kd {
     color: #cccccc;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .s,
@@ -255,7 +251,7 @@
   .highlight .sh,
   .highlight .sx,
   .highlight .s1 {
-    color: #aaaaaa;
+    color: #999999;
   }
 
   .highlight .sa {
@@ -263,7 +259,7 @@
   }
 
   .highlight .sr {
-    color: #999999;
+    color: #888888;
   }
 
   .highlight .si {
@@ -280,7 +276,7 @@
 
   .highlight .nc {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .no {
@@ -288,7 +284,7 @@
   }
 
   .highlight .na {
-    color: #999999;
+    color: #888888;
   }
 
   .highlight .m,
@@ -299,15 +295,15 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #aaaaaa;
+    color: #999999;
   }
 
   .highlight .ss {
-    color: #aaaaaa;
+    color: #999999;
   }
 
   .highlight .nd {
-    color: #888888;
+    color: #777777;
   }
 
   .highlight .nf,
@@ -329,11 +325,11 @@
 
   .highlight .ne {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .highlight .nl {
-    color: #aaaaaa;
+    color: #999999;
   }
 
   .highlight .py {
@@ -345,6 +341,6 @@
   }
 
   .highlight .gs {
-    font-weight: bold;
+    font-weight: 600;
   }
 }
