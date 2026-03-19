@@ -84,23 +84,30 @@ In April 2023 he filed a dispute against a seller who gave him non-functional co
 
 He went by several names. On Exploit.in he was **Lavander**. On GitHub he was **aels** and Lavander, with profiles that link directly back to his Exploit.in account. On X he was **@AelsMartin** with a bio that just says "I'm alive." On Telegram he was **@CrazyMark**, until that account went silent on July 9, 2023. On XSS.is he had been posting since 2012, mostly about corporate email harvesting and phishing, until the admins deleted most of it after banning him.
 
-The name behind the aliases is **Andrei Vladimirovich Tarasov**. Russian national, born in Sarov in the Nizhny Novgorod region, mid-thirties, red hair, around five feet eight.
+The name behind the aliases is **Andrei Vladimirovich Tarasov**. Russian national, born October 20, 1990 in Sarov (formerly Arzamas-16), Nizhny Novgorod region. 5'8", 170 lbs, red hair, brown eyes.
+
+![Passport photograph of Andrei Tarasov](https://i.ibb.co/dJzPKqNB/aels-passport.jpg)
+*Andrei Vladimirovich Tarasov, known online as AELS, Lavander, and CrazyMark.*
 
 <div class="dossier-card">
-<div class="dossier-header">
-<img src="https://i.ibb.co/dJzPKqNB/aels-passport.jpg" alt="Andrei Tarasov" class="dossier-photo">
-<div class="dossier-name"><h4>Andrei Vladimirovich Tarasov</h4>
-<span>AELS / Lavander / CrazyMark</span></div>
+<div class="dossier-header" style="padding:1rem 1.5rem">
+<div class="dossier-name"><h4>Tarasov Andrey Vladimirovich</h4>
+<span>AELS / Lavander / CrazyMark / AELSMartin</span></div>
 </div>
 <div class="dossier-grid">
-<div class="dossier-row"><span class="dossier-label">Born</span><span class="dossier-value">Sarov, Nizhny Novgorod region</span></div>
-<div class="dossier-row"><span class="dossier-label">Age</span><span class="dossier-value">Mid-thirties</span></div>
-<div class="dossier-row"><span class="dossier-label">Exploit.in</span><span class="dossier-value">Lavander</span></div>
-<div class="dossier-row"><span class="dossier-label">GitHub</span><span class="dossier-value">aels</span></div>
-<div class="dossier-row"><span class="dossier-label">X / Twitter</span><span class="dossier-value">@AelsMartin</span></div>
-<div class="dossier-row"><span class="dossier-label">Telegram</span><span class="dossier-value">@CrazyMark (silent since Jul 9, 2023)</span></div>
+<div class="dossier-row"><span class="dossier-label">Date of birth</span><span class="dossier-value">20 October 1990</span></div>
+<div class="dossier-row"><span class="dossier-label">Place of birth</span><span class="dossier-value">Sarov (Arzamas-16), Nizhny Novgorod Region</span></div>
+<div class="dossier-row"><span class="dossier-label">Citizenship</span><span class="dossier-value">Russian Federation</span></div>
+<div class="dossier-row"><span class="dossier-label">Residence</span><span class="dossier-value">Sarov, Lenin Ave. 21, apt. 34</span></div>
+<div class="dossier-row"><span class="dossier-label">Phone</span><span class="dossier-value">+7 (967) 141-70-65</span></div>
+<div class="dossier-row"><span class="dossier-label">Email</span><span class="dossier-value">aelsm@mail.ru</span></div>
+<div class="dossier-row"><span class="dossier-label">Telegram</span><span class="dossier-value">@CrazyMark (ID: 130731276, lost Jul 9 2023)</span></div>
+<div class="dossier-row"><span class="dossier-label">Forum</span><span class="dossier-value">Exploit.in - Lavander (#190351)</span></div>
+<div class="dossier-row"><span class="dossier-label">GitHub</span><span class="dossier-value">aels / Lavander</span></div>
+<div class="dossier-row"><span class="dossier-label">X</span><span class="dossier-value">@AelsMartin</span></div>
+<div class="dossier-row"><span class="dossier-label">Passport</span><span class="dossier-value">Series 22 10 No. 674108</span></div>
+<div class="dossier-row"><span class="dossier-label">Physical</span><span class="dossier-value">5'8", 170 lbs, red hair, brown eyes</span></div>
 </div>
-<div class="dossier-status"><span class="status-dot" style="background:#cc0000"></span> US Secret Service Most Wanted — DOJ indicted Aug 2024</div>
 </div>
 
 ### Arrested, released, back in Russia
@@ -131,23 +138,28 @@ This is independently confirmed. In January 2023, Cisco Talos researcher Azim Kh
 
 We are publishing it.
 
-The person behind the Baddie alias is **Likhogray Maxim Alexandrovich**.
+The person behind the Baddie alias is **Likhogray Maxim Alexandrovich**. Born September 12, 1986 in Tiraspol, Moldavian SSR. Russian citizen, last registered in Kaliningrad.
+
+![Dossier photograph of Maxim Likhogray](https://i.ibb.co/VWRxBYWn/baddie-pic.jpg)
+*Likhogray Maxim Alexandrovich, alias Baddie.*
 
 <div class="dossier-card">
-<div class="dossier-header">
-<img src="https://i.ibb.co/VWRxBYWn/baddie-pic.jpg" alt="Maxim Likhogray" class="dossier-photo">
+<div class="dossier-header" style="padding:1rem 1.5rem">
 <div class="dossier-name"><h4>Likhogray Maxim Alexandrovich</h4>
 <span>Baddie</span></div>
 </div>
 <div class="dossier-grid">
 <div class="dossier-row"><span class="dossier-label">Date of birth</span><span class="dossier-value">September 12, 1986</span></div>
-<div class="dossier-row"><span class="dossier-label">Origin</span><span class="dossier-value">Moldavian SSR, Tiraspol</span></div>
-<div class="dossier-row"><span class="dossier-label">Last residence</span><span class="dossier-value">Kaliningrad, Russia</span></div>
-<div class="dossier-row"><span class="dossier-label">Current location</span><span class="dossier-value">Germany (evading prosecution)</span></div>
-<div class="dossier-row"><span class="dossier-label">Education</span><span class="dossier-value">Engineering-Technical Institute, Kant Baltic Federal University</span></div>
-<div class="dossier-row"><span class="dossier-label">Online</span><span class="dossier-value">VK: hotmilkcoffeecacaocappuccinotea — X: @itsslick</span></div>
+<div class="dossier-row"><span class="dossier-label">Place of birth</span><span class="dossier-value">Tiraspol, Moldavian SSR</span></div>
+<div class="dossier-row"><span class="dossier-label">Citizenship</span><span class="dossier-value">Russian Federation</span></div>
+<div class="dossier-row"><span class="dossier-label">TIN</span><span class="dossier-value">390611022846</span></div>
+<div class="dossier-row"><span class="dossier-label">Address</span><span class="dossier-value">Kaliningrad, Y. Gagarin St. 143, apt. 3</span></div>
+<div class="dossier-row"><span class="dossier-label">Passport</span><span class="dossier-value">2706060535 (issued 26.10.2006, Kaliningrad)</span></div>
+<div class="dossier-row"><span class="dossier-label">Solvency</span><span class="dossier-value">0.13 (low), no recorded income 2021-2023</span></div>
+<div class="dossier-row"><span class="dossier-label">Negative records</span><span class="dossier-value">Drug-related entries 2014-2016, credit stop-lists</span></div>
+<div class="dossier-row"><span class="dossier-label">VK</span><span class="dossier-value">hotmilkcoffeecacaocappuccinotea</span></div>
+<div class="dossier-row"><span class="dossier-label">X</span><span class="dossier-value">@itsslick</span></div>
 </div>
-<div class="dossier-status"><span class="status-dot" style="background:#cc0000"></span> Criminal record in Russian Federation — at large</div>
 </div>
 
 ### What the targeting data shows
