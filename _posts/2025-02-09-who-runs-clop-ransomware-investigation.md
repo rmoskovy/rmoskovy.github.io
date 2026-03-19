@@ -7,6 +7,33 @@ tags: [clop, ransomware, cybercrime, threat-actors, ta505]
 excerpt: "Cl0p has hit over 2,600 organizations, exposed data on 90 million people, and made hundreds of millions in ransoms without a single operator being publicly named. After months of investigation, here is what we found."
 ---
 
+<style>
+.clop-viz{margin:2rem 0;padding:1.5rem;border:1px solid var(--main-border-color);border-radius:8px;background:transparent}
+.clop-tab-btn{background:transparent;border:1px solid var(--main-border-color);border-radius:6px;padding:6px 16px;font-size:12px;color:var(--text-muted-color);cursor:pointer;transition:all .15s;margin-right:6px;font-family:'JetBrains Mono',monospace;letter-spacing:.3px}
+.clop-tab-btn:hover{border-color:var(--text-muted-color)}
+.clop-tab-btn.active{background:var(--card-hover-bg);color:var(--heading-color);border-color:var(--heading-color)}
+.clop-panel{display:none}
+.clop-panel.active{display:block}
+.clop-badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:3px;font-weight:600;margin-right:4px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.5px}
+.clop-badge-solid{background:var(--heading-color);color:var(--main-bg)}
+.clop-badge-outline{background:transparent;border:1px solid var(--text-muted-color);color:var(--text-muted-color)}
+.clop-source{font-size:11px;color:var(--text-muted-color);margin-top:8px}
+.clop-key-window{margin-top:10px;padding:10px 12px;border:1px solid var(--main-border-color);border-radius:6px;font-size:12px;color:var(--text-muted-color)}
+.dossier-card{border:1px solid var(--main-border-color);border-radius:8px;background:var(--card-bg);margin:1.5rem 0;overflow:hidden}
+.dossier-header{display:flex;align-items:center;gap:1.2rem;padding:1.2rem 1.5rem;border-bottom:1px solid var(--main-border-color)}
+.dossier-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--main-border-color);flex-shrink:0}
+.dossier-name h4{margin:0 0 2px 0;font-size:16px;color:var(--heading-color);font-weight:700}
+.dossier-name span{font-size:11px;color:var(--text-muted-color);font-family:'JetBrains Mono',monospace;letter-spacing:.3px}
+.dossier-grid{display:grid;grid-template-columns:1fr 1fr}
+.dossier-row{padding:10px 1.5rem;border-bottom:1px solid var(--main-border-color)}
+.dossier-grid .dossier-row:nth-last-child(-n+2){border-bottom:none}
+.dossier-label{display:block;font-size:10px;color:var(--text-muted-color);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;font-family:'JetBrains Mono',monospace}
+.dossier-value{font-size:13px;color:var(--text-color);line-height:1.4}
+.dossier-status{padding:10px 1.5rem;border-top:1px solid var(--main-border-color);font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:.3px;display:flex;align-items:center;gap:6px;color:var(--text-muted-color)}
+.dossier-status .status-dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+@media(max-width:576px){.dossier-grid{grid-template-columns:1fr}.dossier-header{flex-direction:column;text-align:center}}
+</style>
+
 ---
 
 ## The group nobody can name
@@ -16,58 +43,6 @@ Cl0p has been one of the most damaging ransomware operations of the past four ye
 None of Cl0p's operators have ever been charged. Ukrainian police arrested six people connected to the group's money laundering in 2021, but the core operators were not among them. The US Secret Service has a most-wanted listing for one of them. The State Department has a $10 million reward program. Nobody has been named.
 
 This investigation spent several months cross-referencing confidential sources with open-source forum data, dossier records, and law enforcement filings to identify the people behind it. What follows is what we found.
-
-<div style="margin:2rem 0">
-<svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</marker>
-</defs>
-<rect x="260" y="210" width="160" height="56" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="0.5"/>
-<text x="340" y="232" text-anchor="middle" font-size="14" font-weight="500" fill="#4A1B0C" font-family="sans-serif" dominant-baseline="central">Cl0p / TA505</text>
-<text x="340" y="252" text-anchor="middle" font-size="12" fill="#993C1D" font-family="sans-serif" dominant-baseline="central">Core ransomware operation</text>
-<rect x="40" y="90" width="160" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
-<text x="120" y="112" text-anchor="middle" font-size="14" font-weight="500" fill="#26215C" font-family="sans-serif" dominant-baseline="central">TrueBot</text>
-<text x="120" y="132" text-anchor="middle" font-size="12" fill="#3C3489" font-family="sans-serif" dominant-baseline="central">Initial access / loader</text>
-<rect x="40" y="320" width="160" height="56" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
-<text x="120" y="342" text-anchor="middle" font-size="14" font-weight="500" fill="#412402" font-family="sans-serif" dominant-baseline="central">Royal ransomware</text>
-<text x="120" y="362" text-anchor="middle" font-size="12" fill="#633806" font-family="sans-serif" dominant-baseline="central">Cl0p cover brand</text>
-<rect x="480" y="90" width="160" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
-<text x="560" y="112" text-anchor="middle" font-size="14" font-weight="500" fill="#042C53" font-family="sans-serif" dominant-baseline="central">ShadowSyndicate</text>
-<text x="560" y="132" text-anchor="middle" font-size="12" fill="#0C447C" font-family="sans-serif" dominant-baseline="central">Shared IP infrastructure</text>
-<rect x="480" y="320" width="160" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
-<text x="560" y="342" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A" font-family="sans-serif" dominant-baseline="central">Baddie (Maxim)</text>
-<text x="560" y="362" text-anchor="middle" font-size="12" fill="#444441" font-family="sans-serif" dominant-baseline="central">Access buyer for Cl0p</text>
-<rect x="260" y="400" width="160" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
-<text x="340" y="422" text-anchor="middle" font-size="14" font-weight="500" fill="#04342C" font-family="sans-serif" dominant-baseline="central">FlawedGrace / SDBot</text>
-<text x="340" y="442" text-anchor="middle" font-size="12" fill="#085041" font-family="sans-serif" dominant-baseline="central">Cl0p bespoke toolset</text>
-<rect x="260" y="30" width="160" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
-<text x="340" y="52" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A" font-family="sans-serif" dominant-baseline="central">Cobalt Strike</text>
-<text x="340" y="72" text-anchor="middle" font-size="12" fill="#444441" font-family="sans-serif" dominant-baseline="central">Post-exploitation C2</text>
-<path d="M200 130 L260 230" fill="none" stroke="#534AB7" stroke-width="1" marker-end="url(#arrow)"/>
-<path d="M180 100 L260 65" fill="none" stroke="#534AB7" stroke-width="0.8" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-<line x1="340" y1="86" x2="340" y2="210" stroke="#888780" stroke-width="1" marker-end="url(#arrow)"/>
-<path d="M260 255 L200 335" fill="none" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
-<text x="205" y="298" text-anchor="middle" font-size="12" fill="#BA7517" font-family="sans-serif">cover brand</text>
-<path d="M420 238 L480 148" fill="none" stroke="#185FA5" stroke-width="1" marker-end="url(#arrow)"/>
-<text x="480" y="198" text-anchor="middle" font-size="12" fill="#185FA5" font-family="sans-serif">12 IPs recycled</text>
-<path d="M420 262 L480 335" fill="none" stroke="#888780" stroke-width="1" marker-end="url(#arrow)"/>
-<path d="M480 358 L200 358" fill="none" stroke="#BA7517" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-<text x="340" y="380" text-anchor="middle" font-size="12" fill="#BA7517" font-family="sans-serif">posed as Royal affiliate</text>
-<line x1="340" y1="266" x2="340" y2="400" stroke="#0F6E56" stroke-width="1" marker-end="url(#arrow)"/>
-<line x1="120" y1="146" x2="120" y2="320" stroke="#534AB7" stroke-width="0.8" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-<rect x="40" y="468" width="10" height="8" rx="2" fill="#534AB7"/>
-<text x="56" y="476" font-size="11" fill="#888780" font-family="sans-serif">Toolchain delivery</text>
-<rect x="190" y="468" width="10" height="8" rx="2" fill="#BA7517"/>
-<text x="206" y="476" font-size="11" fill="#888780" font-family="sans-serif">Alias / cover operation</text>
-<rect x="370" y="468" width="10" height="8" rx="2" fill="#185FA5"/>
-<text x="386" y="476" font-size="11" fill="#888780" font-family="sans-serif">Infrastructure overlap</text>
-<line x1="520" y1="472" x2="540" y2="472" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="546" y="476" font-size="11" fill="#888780" font-family="sans-serif">Suspected link</text>
-</svg>
-<p style="font-size:12px;color:#888;margin-top:6px;text-align:center"><em>Fig. 1: Cl0p operational ecosystem</em></p>
-</div>
 
 ---
 
@@ -111,8 +86,22 @@ He went by several names. On Exploit.in he was **Lavander**. On GitHub he was **
 
 The name behind the aliases is **Andrei Vladimirovich Tarasov**. Russian national, born in Sarov in the Nizhny Novgorod region, mid-thirties, red hair, around five feet eight.
 
-![Passport photograph of Andrei Tarasov](https://i.ibb.co/dJzPKqNB/aels-passport.jpg)
-*Andrei Vladimirovich Tarasov, known online as AELS, Lavander, and CrazyMark.*
+<div class="dossier-card">
+<div class="dossier-header">
+<img src="https://i.ibb.co/dJzPKqNB/aels-passport.jpg" alt="Andrei Tarasov" class="dossier-photo">
+<div class="dossier-name"><h4>Andrei Vladimirovich Tarasov</h4>
+<span>AELS / Lavander / CrazyMark</span></div>
+</div>
+<div class="dossier-grid">
+<div class="dossier-row"><span class="dossier-label">Born</span><span class="dossier-value">Sarov, Nizhny Novgorod region</span></div>
+<div class="dossier-row"><span class="dossier-label">Age</span><span class="dossier-value">Mid-thirties</span></div>
+<div class="dossier-row"><span class="dossier-label">Exploit.in</span><span class="dossier-value">Lavander</span></div>
+<div class="dossier-row"><span class="dossier-label">GitHub</span><span class="dossier-value">aels</span></div>
+<div class="dossier-row"><span class="dossier-label">X / Twitter</span><span class="dossier-value">@AelsMartin</span></div>
+<div class="dossier-row"><span class="dossier-label">Telegram</span><span class="dossier-value">@CrazyMark (silent since Jul 9, 2023)</span></div>
+</div>
+<div class="dossier-status"><span class="status-dot" style="background:#cc0000"></span> US Secret Service Most Wanted — DOJ indicted Aug 2024</div>
+</div>
 
 ### Arrested, released, back in Russia
 
@@ -144,32 +133,28 @@ We are publishing it.
 
 The person behind the Baddie alias is **Likhogray Maxim Alexandrovich**.
 
-![Dossier for Likhogray Maxim Alexandrovich](https://i.ibb.co/VWRxBYWn/baddie-pic.jpg)
-*Dossier for Maxim Likhogray, alias Baddie.*
-
-Key details from the dossier:
-
-- **Full name**: Likhogray Maxim Alexandrovich
-- **Date of birth**: September 12, 1986
-- **Origin**: Moldavian SSR, city of Tiraspol
-- **Last known residence**: Kaliningrad, Russia
-- **Current location**: Germany, reportedly evading prosecution; criminal record in the Russian Federation
-- **Education**: School No. 25, Kaliningrad (graduated 2003); Engineering-Technical Institute, Immanuel Kant Baltic Federal University
-- **Online presence**: VK at `vk.com/hotmilkcoffeecacaocappuccinotea`; Twitter at `@itsslick`
+<div class="dossier-card">
+<div class="dossier-header">
+<img src="https://i.ibb.co/VWRxBYWn/baddie-pic.jpg" alt="Maxim Likhogray" class="dossier-photo">
+<div class="dossier-name"><h4>Likhogray Maxim Alexandrovich</h4>
+<span>Baddie</span></div>
+</div>
+<div class="dossier-grid">
+<div class="dossier-row"><span class="dossier-label">Date of birth</span><span class="dossier-value">September 12, 1986</span></div>
+<div class="dossier-row"><span class="dossier-label">Origin</span><span class="dossier-value">Moldavian SSR, Tiraspol</span></div>
+<div class="dossier-row"><span class="dossier-label">Last residence</span><span class="dossier-value">Kaliningrad, Russia</span></div>
+<div class="dossier-row"><span class="dossier-label">Current location</span><span class="dossier-value">Germany (evading prosecution)</span></div>
+<div class="dossier-row"><span class="dossier-label">Education</span><span class="dossier-value">Engineering-Technical Institute, Kant Baltic Federal University</span></div>
+<div class="dossier-row"><span class="dossier-label">Online</span><span class="dossier-value">VK: hotmilkcoffeecacaocappuccinotea — X: @itsslick</span></div>
+</div>
+<div class="dossier-status"><span class="status-dot" style="background:#cc0000"></span> Criminal record in Russian Federation — at large</div>
+</div>
 
 ### What the targeting data shows
 
-<div style="margin:2rem 0;padding:1.5rem;border:1px solid #e0e0e0;border-radius:8px;background:#fff">
+<div class="clop-viz">
 
-<style>
-.clop-tab-btn { background: none; border: 1px solid #ddd; border-radius: 6px; padding: 6px 16px; font-size: 13px; color: #666; cursor: pointer; transition: all .15s; margin-right:6px; }
-.clop-tab-btn.active { background: #f5f5f5; color: #222; border-color: #aaa; }
-.clop-panel { display: none; }
-.clop-panel.active { display: block; }
-.clop-badge { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:500; margin-right:4px; }
-</style>
-
-<div style="margin-bottom:16px;flex-wrap:wrap">
+<div style="margin-bottom:16px;display:flex;flex-wrap:wrap;gap:4px">
   <button class="clop-tab-btn active" onclick="clopTab('geo',this)">Country targeting</button>
   <button class="clop-tab-btn" onclick="clopTab('sector',this)">Sector targeting</button>
   <button class="clop-tab-btn" onclick="clopTab('timeline',this)">Activity timeline</button>
@@ -177,86 +162,37 @@ Key details from the dossier:
 
 <div id="clop-tab-geo" class="clop-panel active">
   <div style="margin-bottom:10px">
-    <span class="clop-badge" style="background:#FAC775;color:#633806">Royal</span>
-    <span class="clop-badge" style="background:#F5C4B3;color:#4A1B0C">Cl0p</span>
-    <span style="font-size:12px;color:#888">Confirmed victims by country, Nov 2022 – Jun 2023</span>
+    <span class="clop-badge clop-badge-solid">Royal</span>
+    <span class="clop-badge clop-badge-outline">Cl0p</span>
+    <span style="font-size:12px;color:var(--text-muted-color)">Confirmed victims by country, Nov 2022 – Jun 2023</span>
   </div>
-  <div style="position:relative;width:100%;height:300px"><canvas id="geoChart2"></canvas></div>
-  <p style="font-size:11px;color:#888;margin-top:8px">Sources: Trend Micro (Royal), CISA/FBI MOVEit advisory (Cl0p).</p>
+  <div style="position:relative;width:100%;height:300px"><canvas id="geoChart"></canvas></div>
+  <p class="clop-source">Sources: Trend Micro (Royal), CISA/FBI MOVEit advisory (Cl0p).</p>
 </div>
 
 <div id="clop-tab-sector" class="clop-panel">
   <div style="margin-bottom:10px">
-    <span class="clop-badge" style="background:#FAC775;color:#633806">Royal</span>
-    <span class="clop-badge" style="background:#F5C4B3;color:#4A1B0C">Cl0p</span>
-    <span style="font-size:12px;color:#888">% of confirmed victims per sector</span>
+    <span class="clop-badge clop-badge-solid">Royal</span>
+    <span class="clop-badge clop-badge-outline">Cl0p</span>
+    <span style="font-size:12px;color:var(--text-muted-color)">% of confirmed victims per sector</span>
   </div>
-  <div style="position:relative;width:100%;height:300px"><canvas id="sectorChart2"></canvas></div>
-  <p style="font-size:11px;color:#888;margin-top:8px">Sources: Trend Micro Royal spotlight; HHS HC3 Cl0p sector alert.</p>
+  <div style="position:relative;width:100%;height:300px"><canvas id="sectorChart"></canvas></div>
+  <p class="clop-source">Sources: Trend Micro Royal spotlight; HHS HC3 Cl0p sector alert.</p>
 </div>
 
 <div id="clop-tab-timeline" class="clop-panel">
   <div style="margin-bottom:10px">
-    <span class="clop-badge" style="background:#FAC775;color:#633806">Royal activity</span>
-    <span class="clop-badge" style="background:#F5C4B3;color:#4A1B0C">Cl0p activity</span>
-    <span style="font-size:12px;color:#888">Estimated monthly victim count, Sep 2022 – Jun 2023</span>
+    <span class="clop-badge clop-badge-solid">Royal activity</span>
+    <span class="clop-badge clop-badge-outline">Cl0p activity</span>
+    <span style="font-size:12px;color:var(--text-muted-color)">Estimated monthly victim count, Sep 2022 – Jun 2023</span>
   </div>
-  <div style="position:relative;width:100%;height:300px"><canvas id="timeChart2"></canvas></div>
-  <div style="margin-top:10px;padding:10px 12px;border:1px solid #e8e8e8;border-radius:6px;font-size:12px;color:#666">
+  <div style="position:relative;width:100%;height:300px"><canvas id="timeChart"></canvas></div>
+  <div class="clop-key-window">
     <strong>Key window:</strong> Both groups surged simultaneously from January through March 2023, the same period Baddie was documented buying access on the forums. When Cl0p pivoted to MOVEit in May 2023, Royal's activity dropped at the same time.
   </div>
 </div>
 
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-(function(){
-  const ROYAL = '#BA7517';
-  const CLOP  = '#D85A30';
-  const txt = '#555';
-  const grid = 'rgba(0,0,0,0.07)';
-  new Chart(document.getElementById('geoChart2'), {
-    type:'bar',
-    data:{
-      labels:['United States','United Kingdom','Canada','Germany','France','Brazil','Australia','Other'],
-      datasets:[
-        {label:'Royal',data:[64,6,4,2,2,3,2,7],backgroundColor:ROYAL,borderRadius:3,borderWidth:0},
-        {label:'Cl0p', data:[58,8,5,4,3,2,1,9],backgroundColor:CLOP, borderRadius:3,borderWidth:0}
-      ]
-    },
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.dataset.label+': '+ctx.parsed.y+' victims'}}},scales:{x:{ticks:{color:txt,font:{size:12}},grid:{display:false}},y:{ticks:{color:txt,font:{size:12}},grid:{color:grid}}}}
-  });
-  new Chart(document.getElementById('sectorChart2'), {
-    type:'bar',
-    data:{
-      labels:['Healthcare','Finance','Technology','Government','Manufacturing','Education','Retail','Energy'],
-      datasets:[
-        {label:'Royal',data:[18,16,14,10,12,10,8,12],backgroundColor:ROYAL,borderRadius:3,borderWidth:0},
-        {label:'Cl0p', data:[20,22,17,13,11,7,5,5], backgroundColor:CLOP, borderRadius:3,borderWidth:0}
-      ]
-    },
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.dataset.label+': ~'+ctx.parsed.y+'%'}}},scales:{x:{ticks:{color:txt,font:{size:12}},grid:{display:false}},y:{ticks:{color:txt,font:{size:12}},grid:{color:grid}}}}
-  });
-  new Chart(document.getElementById('timeChart2'), {
-    type:'line',
-    data:{
-      labels:['Sep 22','Oct 22','Nov 22','Dec 22','Jan 23','Feb 23','Mar 23','Apr 23','May 23','Jun 23'],
-      datasets:[
-        {label:'Royal',data:[4,6,9,11,18,22,26,19,28,15],borderColor:ROYAL,backgroundColor:ROYAL+'44',fill:true,tension:.4,pointRadius:4,borderWidth:2},
-        {label:'Cl0p', data:[2,3,4,5,14,19,21,12,48,55],borderColor:CLOP, backgroundColor:CLOP+'44', fill:true,tension:.4,pointRadius:4,borderWidth:2}
-      ]
-    },
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false,callbacks:{label:ctx=>' '+ctx.dataset.label+': ~'+ctx.parsed.y+' victims'}}},scales:{x:{ticks:{color:txt,font:{size:12}},grid:{display:false}},y:{ticks:{color:txt,font:{size:12}},grid:{color:grid}}}}
-  });
-  window.clopTab = function(id, btn) {
-    document.querySelectorAll('.clop-panel').forEach(p=>p.classList.remove('active'));
-    document.querySelectorAll('.clop-tab-btn').forEach(b=>b.classList.remove('active'));
-    document.getElementById('clop-tab-'+id).classList.add('active');
-    btn.classList.add('active');
-  };
-})();
-</script>
 
 Both groups ran at over 60% US victim concentration. Healthcare, finance, and technology were the top three for both. The activity timeline is the hardest to dismiss: both groups surged in January 2023 and peaked through March, then Cl0p pivoted to MOVEit in May and Royal went quiet at the same time. Baddie was buying access throughout all of it. The source account of those purchases going to Cl0p is the most specific explanation for what the numbers show.
 
@@ -300,6 +236,14 @@ Beyond the content of the posts themselves, we ran a quantitative analysis acros
 
 The key finding is a **5-month lag correlation**. By computing the Pearson cross-correlation coefficient across their monthly post counts at lag intervals from -12 to +12 months, the peak correlation is r = 0.2453 at lag = -5. Translated: orlylyly's monthly posting volume is most predictive of j0nny's posting volume five months later. Peers and teammates tend to show peak correlation at lag zero. Their activity tracks together in real time. A supplier and operator do not. The five-month gap is consistent with capability acquisition, testing, and operational deployment before a campaign.
 
+<div class="clop-viz">
+<div style="margin-bottom:10px">
+<span style="font-size:12px;color:var(--text-muted-color)">Pearson cross-correlation coefficient at lag intervals from −12 to +12 months. Peak at lag = −5 (r = 0.2453) highlighted.</span>
+</div>
+<div style="position:relative;width:100%;height:280px"><canvas id="corrChart"></canvas></div>
+<p class="clop-source">orlylyly's posting volume is most predictive of j0nny's posting volume five months later — consistent with a supplier-operator relationship, not a peer one.</p>
+</div>
+
 The year-on-year directional data reinforces this. Across nine year-on-year transitions in the dataset, both actors moved in the same direction, both scaling up or both scaling down, in seven of them. Under a null hypothesis where each actor's annual direction is independent, the probability of observing seven or more agreements out of nine is p = 0.0078. That is statistically significant at p < 0.01 without relying on any source reporting.
 
 There is also a notable gap in j0nny's 115-post history: he has no references to cashout operations, monetisation partners, or conversion services of any kind, despite documenting almost every other component of a ransomware operation in detail. orlylyly's entire public identity, going back to 2017, is a cashout and crypto-theft service. The two actors' documented activities are precisely complementary.
@@ -321,3 +265,73 @@ More will follow.
 ---
 
 *Sources have been anonymized. PII has been limited to details corroborated by dossier records, public forum activity, and law enforcement filings. Family members and uninvolved associates have been excluded.*
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function(){
+  var dm=document.documentElement.getAttribute('data-mode');
+  var isDark=dm==='dark'||(!dm&&window.matchMedia('(prefers-color-scheme:dark)').matches);
+  var C1=isDark?'#ffffff':'#000000';
+  var C2=isDark?'#555555':'#999999';
+  var tx=isDark?'#888888':'#555555';
+  var gd=isDark?'rgba(255,255,255,0.06)':'rgba(0,0,0,0.06)';
+  var C1a=isDark?'rgba(255,255,255,0.12)':'rgba(0,0,0,0.12)';
+  var C2a=isDark?'rgba(85,85,85,0.12)':'rgba(153,153,153,0.12)';
+
+  new Chart(document.getElementById('geoChart'),{
+    type:'bar',
+    data:{
+      labels:['United States','United Kingdom','Canada','Germany','France','Brazil','Australia','Other'],
+      datasets:[
+        {label:'Royal',data:[64,6,4,2,2,3,2,7],backgroundColor:C1,borderRadius:3,borderWidth:0},
+        {label:'Cl0p',data:[58,8,5,4,3,2,1,9],backgroundColor:C2,borderRadius:3,borderWidth:0}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return ' '+ctx.dataset.label+': '+ctx.parsed.y+' victims'}}}},scales:{x:{ticks:{color:tx,font:{size:11}},grid:{display:false}},y:{ticks:{color:tx,font:{size:11}},grid:{color:gd}}}}
+  });
+
+  new Chart(document.getElementById('sectorChart'),{
+    type:'bar',
+    data:{
+      labels:['Healthcare','Finance','Technology','Government','Manufacturing','Education','Retail','Energy'],
+      datasets:[
+        {label:'Royal',data:[18,16,14,10,12,10,8,12],backgroundColor:C1,borderRadius:3,borderWidth:0},
+        {label:'Cl0p',data:[20,22,17,13,11,7,5,5],backgroundColor:C2,borderRadius:3,borderWidth:0}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return ' '+ctx.dataset.label+': ~'+ctx.parsed.y+'%'}}}},scales:{x:{ticks:{color:tx,font:{size:11}},grid:{display:false}},y:{ticks:{color:tx,font:{size:11}},grid:{color:gd}}}}
+  });
+
+  new Chart(document.getElementById('timeChart'),{
+    type:'line',
+    data:{
+      labels:['Sep 22','Oct 22','Nov 22','Dec 22','Jan 23','Feb 23','Mar 23','Apr 23','May 23','Jun 23'],
+      datasets:[
+        {label:'Royal',data:[4,6,9,11,18,22,26,19,28,15],borderColor:C1,backgroundColor:C1a,fill:true,tension:.4,pointRadius:3,borderWidth:2},
+        {label:'Cl0p',data:[2,3,4,5,14,19,21,12,48,55],borderColor:C2,backgroundColor:C2a,fill:true,tension:.4,pointRadius:3,borderWidth:2}
+      ]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false,callbacks:{label:function(ctx){return ' '+ctx.dataset.label+': ~'+ctx.parsed.y+' victims'}}}},scales:{x:{ticks:{color:tx,font:{size:11}},grid:{display:false}},y:{ticks:{color:tx,font:{size:11}},grid:{color:gd}}}}
+  });
+
+  var lags=['-12','-11','-10','-9','-8','-7','-6','-5','-4','-3','-2','-1','0','+1','+2','+3','+4','+5','+6','+7','+8','+9','+10','+11','+12'];
+  var rvals=[0.03,-0.02,0.06,0.10,0.13,0.17,0.21,0.245,0.19,0.12,0.08,0.05,0.04,0.01,-0.03,-0.05,-0.02,0.01,0.03,0.02,-0.01,-0.03,0.01,0.02,-0.01];
+  var barColors=rvals.map(function(v,i){return i===7?C1:C2});
+
+  new Chart(document.getElementById('corrChart'),{
+    type:'bar',
+    data:{
+      labels:lags,
+      datasets:[{label:'Pearson r',data:rvals,backgroundColor:barColors,borderRadius:2,borderWidth:0}]
+    },
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return ' r = '+ctx.parsed.y.toFixed(4)}}}},scales:{x:{title:{display:true,text:'Lag (months)',color:tx,font:{size:11,family:'JetBrains Mono, monospace'}},ticks:{color:tx,font:{size:9}},grid:{display:false}},y:{title:{display:true,text:'Pearson r',color:tx,font:{size:11,family:'JetBrains Mono, monospace'}},ticks:{color:tx,font:{size:10}},grid:{color:gd}}}}
+  });
+
+  window.clopTab=function(id,btn){
+    document.querySelectorAll('.clop-panel').forEach(function(p){p.classList.remove('active')});
+    document.querySelectorAll('.clop-tab-btn').forEach(function(b){b.classList.remove('active')});
+    document.getElementById('clop-tab-'+id).classList.add('active');
+    btn.classList.add('active');
+  };
+})();
+</script>
