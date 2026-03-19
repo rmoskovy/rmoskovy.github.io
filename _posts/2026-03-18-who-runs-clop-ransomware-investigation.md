@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Who Runs Cl0p? Inside the Most Elusive Ransomware Operation in the World"
-date: 2026-02-09
+date: 2026-03-18
 categories: [threat-intelligence, ransomware]
 tags: [clop, ransomware, cybercrime, threat-actors, ta505]
 excerpt: "Cl0p has hit over 2,600 organizations, exposed data on 90 million people, and made hundreds of millions in ransoms without a single operator being publicly named. After months of investigation, here is what we found."
